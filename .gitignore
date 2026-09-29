@@ -1,0 +1,15 @@
+/vendor/
+/node_modules/
+.env
+.env.*
+!.env.example
+/public/build/
+/storage/*.key
+/storage/framework/
+
+/storage/app/private/*
+!/storage/app/private/.gitignore
+/storage/logs/*
+!/storage/logs/.gitignore
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
