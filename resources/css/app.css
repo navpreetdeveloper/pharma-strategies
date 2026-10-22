@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import "./components/foundation-and-chat.css";
+@import "./components/workspace.css";
+@import "./components/administration.css";
+
+@import "./components/chat-image-viewer.css";
+
+@import "./components/responsive-layout.css";
+
+.nc-password-field { position: relative; }
+.nc-password-field > .nc-input { padding-inline-end: 3rem; }
+.nc-password-toggle {
+    position: absolute;
+    inset-inline-end: 2px;
+    top: 2px;
+    bottom: 2px;
+    width: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: #60788c;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+.nc-password-toggle:hover { color: #125e8a; background: #edf5fa; }
+.nc-password-toggle:focus-visible { outline: 2px solid #125e8a; outline-offset: -3px; }
+.nc-password-toggle[hidden], .nc-password-toggle [hidden] { display: none; }

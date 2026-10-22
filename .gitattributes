@@ -1,0 +1,16 @@
+/archive export-ignore
+/vendor export-ignore
+/node_modules export-ignore
+/.env export-ignore
+/.phpunit.result.cache export-ignore
+/public/hot export-ignore
+/storage/app/private/* export-ignore
+/storage/app/private/.gitignore -export-ignore
+/storage/logs/*.log export-ignore
+/storage/framework/views/*.php export-ignore
+/storage/framework/sessions/* export-ignore
+/storage/framework/sessions/.gitignore -export-ignore
+/storage/framework/cache/data/* export-ignore
+/storage/framework/cache/data/.gitignore -export-ignore
+/storage/framework/testing export-ignore
+/bootstrap/cache/*.php export-ignore

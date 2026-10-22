@@ -1,0 +1,11 @@
+[Unit]
+Description=Pharma Strategies scheduled tasks
+After=network.target
+[Service]
+Type=oneshot
+User=www-data
+Group=www-data
+WorkingDirectory=/srv/pharma/current
+ExecStart=/usr/bin/php8.4 /srv/pharma/current/artisan schedule:run
+UMask=0027
+NoNewPrivileges=true

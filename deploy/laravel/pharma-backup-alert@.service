@@ -1,0 +1,6 @@
+[Unit]
+Description=Record critical Pharma backup failure for monitoring
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/logger -p daemon.crit -t pharma-backup Backup unit failed: %i. Operator response required.

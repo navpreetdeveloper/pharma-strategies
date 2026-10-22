@@ -1,0 +1,16 @@
+.nc-image-viewer { width:min(1100px,calc(100vw - 32px)); max-width:none; max-height:calc(100dvh - 32px); margin:auto; padding:0; overscroll-behavior:contain; border:1px solid var(--nc-border,#d7e3ef); border-radius:16px; background:#fff; color:#10263b; box-shadow:0 24px 80px rgb(0 0 0 / .25); }
+.nc-image-viewer::backdrop { background:rgb(10 25 40 / .76); }
+.nc-image-viewer-toolbar { display:flex; align-items:center; gap:12px; padding:14px 18px; border-bottom:1px solid #d7e3ef; }
+.nc-image-viewer-name { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:600; }
+.nc-image-viewer-stage { display:flex; align-items:center; justify-content:center; min-height:180px; padding:16px; background:#f0f4f8; }
+.nc-image-viewer-stage img { max-width:100%; max-height:calc(100dvh - 140px); object-fit:contain; }
+.nc-image-viewer [hidden] { display:none; }
+@media(max-width:600px) {
+    .nc-image-viewer { width:calc(100vw - 16px); max-height:calc(100dvh - 16px); border-radius:12px; }
+    .nc-image-viewer-toolbar { flex-wrap:wrap; gap:8px; padding:12px; }
+    .nc-image-viewer-name { flex-basis:100%; }
+    .nc-image-viewer-stage { padding:8px; }
+    .nc-image-viewer-stage img { max-height:calc(100dvh - 160px); }
+}
+
+html:has(.nc-image-viewer[open]) { overflow:hidden; }

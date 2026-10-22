@@ -1,0 +1,17 @@
+[Unit]
+Description=Pharma Strategies Laravel reverb
+After=network.target
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/srv/pharma/current
+ExecStart=/usr/bin/php8.4 /srv/pharma/current/artisan reverb:start --host=127.0.0.1 --port=8081
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+KillSignal=SIGTERM
+LimitNOFILE=10000
+UMask=0027
+NoNewPrivileges=true
+[Install]
+WantedBy=multi-user.target

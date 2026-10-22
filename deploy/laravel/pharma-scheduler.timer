@@ -1,0 +1,8 @@
+[Unit]
+Description=Run Pharma Strategies scheduler every minute
+[Timer]
+OnCalendar=*-*-* *:*:00
+Persistent=true
+Unit=pharma-scheduler.service
+[Install]
+WantedBy=timers.target

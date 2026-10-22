@@ -1,0 +1,24 @@
+/vendor/
+/node_modules/
+.env
+.env.*
+!.env.example
+
+# Local historical source and dependency-cleanup backups.
+/archive/
+/.phpunit.result.cache
+/public/build/
+/storage/*.key
+/storage/framework/*
+!/storage/framework/cache/
+!/storage/framework/sessions/
+!/storage/framework/views/
+/public/hot
+/storage/app/private/*
+!/storage/app/private/.gitignore
+/storage/app/firebase/*.json
+/storage/logs/*
+!/storage/logs/.gitignore
+/bootstrap/cache/*.php
+**/node_modules/
+**/*.log

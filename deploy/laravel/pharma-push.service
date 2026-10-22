@@ -1,0 +1,16 @@
+[Unit]
+Description=Pharma Strategies browser push worker
+After=network.target
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/srv/pharma/current
+ExecStart=/usr/bin/php8.4 /srv/pharma/current/artisan queue:work database --queue=push --sleep=0.2 --tries=5 --timeout=60 --max-time=3600
+Restart=always
+RestartSec=5
+TimeoutStopSec=75
+KillSignal=SIGTERM
+UMask=0027
+NoNewPrivileges=true
+[Install]
+WantedBy=multi-user.target
