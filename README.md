@@ -119,6 +119,4 @@ Keep the web server, Reverb, default queue worker and push worker running in sep
 
 Live messages arrive through authenticated user channels. Visible chat pages also reconcile new messages and unread counts every five seconds, including when a socket is connected but misses an event. Presence updates live and reconciles against server heartbeats every fifteen seconds. Heartbeats run independently of WebSockets every twenty seconds while the application is visible. Without a live departure event, a user becomes offline after sixty seconds without a heartbeat, plus the next reconciliation interval. Only Online/Offline is displayed.
 
-## Local port conflicts
 
-On this workstation Pharma Strategies runs at `http://127.0.0.1:8001` because another project uses loopback port 8000. Start it with `powershell -ExecutionPolicy Bypass -File scripts/serve-local.ps1 -PhpBinary C:\php\php.exe -Port 8001` and keep the local `APP_URL` consistent. Run `npm run test:local -- http://127.0.0.1:8001` to test that instance. Development servers use an isolated Windows OPcache ID. Existing browser tabs need a refresh for rebuilt assets; notification permission is specific to the new origin.
